@@ -1,0 +1,37 @@
+9
+
+dir
+2
+http://svn2.assembla.com/svn/uke/static/css/blueprint/plugins
+http://svn2.assembla.com/svn/uke
+
+
+
+2008-03-29T01:02:31.619783Z
+1
+tmcw
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+6f889d7c-ddb9-4dbb-b7a3-8f9b5b8ae9b2
+
+fancy-type
+dir
+
+css-classes
+dir
+
+buttons
+dir
+

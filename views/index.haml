@@ -1,0 +1,81 @@
+!!! XML
+!!!
+%html
+  %head
+    %link{:href=>"/css/blueprint/screen.css", :rel=>"stylesheet", :type=>"text/css", :charset=>"utf-8"}
+    %link{:href=>"/css/blueprint/plugins/fancy-type/fancy-type.css", :rel=>"stylesheet", :type=>"text/css", :charset=>"utf-8"}
+    %link{:href=>"/css/default.css", :rel=>"stylesheet", :type=>"text/css", :charset=>"utf-8"}
+    %title Ukulele/Tom
+  %body
+    .container
+      .column.span-16.prepend-4
+        %img{:src=>"/img/uke_header.jpg", :alt=>"Ukulele/Tom"}
+      .column.span-10.colborder.prepend-4
+        %h3{:class=>"title blue alt"} Tabs
+        %table{:id=>"tabs"}
+          %tr
+            %th Song
+            %th Artist
+          -@tabs.each do |t|
+            %tr
+              %td
+                %a{:href => t[:url]}=t[:song]
+              %td
+                %span{:class => "artist"}= t[:artist]
+        %h5{:class=>"title"} Search Tab Sites
+        :plain
+          <!-- Google CSE Search Box Begins  -->
+          <form action="http://" id="searchbox_013300548148778840370:bqki7ts3otq">
+            <input type="hidden" name="cx" value="013300548148778840370:bqki7ts3otq" />
+            <input type="hidden" name="cof" value="FORID:11" />
+            <input type="text" name="q" size="25" />
+            <input type="submit" name="sa" value="Search" />
+          </form>
+          <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_013300548148778840370%3Abqki7ts3otq&lang=en"></script>  
+        %p{:style=>"margin-top:2em;"}
+          %a{:href=>"http://flickr.com/photos/manthatcooks/53003754/", :title=>"Flickr"} header image (cc) manthatcooks!
+      .column.span-6
+        %h3{:class=>"title green alt"} About
+        %p
+          :redcloth
+            Ukulele/Tom abides. This is my (Tom MacWright)'s little experiment into tabs and ukulele stuff.
+            The software that runs this site is also a bit of an experiment. I wrote a script in Ruby 
+            modeled off of "GD::Tab::Ukulele":http://search.cpan.org/~tateno/GD-Tab-Ukulele-0.01/ 
+            which uses RMagick to draw chords in Imagemagick. Like the Perl module, it's open-source.
+
+            Generally, this site exists because ukuleles are kickass and I felt like I could contribute 
+            something to the collective. If you feel like contributing a tab, 
+            "send it to me":http://www.tommacwright.com/contact/ and I'll definitely add it to the site.
+            h3. News
+            
+            # Updated Sweet Summer's Night on Hammer Hill tab
+            # Got linked up by "Ukulele Hunt":http://ukulelehunt.com/2008/01/25/friday-links-28/, one of my favorite tab blogs.
+            # Added a new tab: "Capital I":http://uke.tommacwright.com/tab/Andrew_Bird-Capital_I_aka_Imitosis by Andrew Bird
+        %h3{:class=>"title red alt"} Links
+        #links  
+          %ul
+            %li
+              %a{:href=>"http://www.4stringchords.com/"} 4 String Chords
+              %span{:class=>"link_note"} Chord reference
+            %li
+              %a{:href=>"http://www.alligatorboogaloo.com/uke/tabs.html"} Ukulele Boogaloo Tabs
+              %span{:class=>"link_note"} Classic, modern tabs
+            %li
+              %a{:href=>"http://www.ukuleledisco.com/clips"} Midnight Ukulele Disco
+              %span{:class=>"link_note"} Friendly ukulele videos
+            %li 
+              %a{:href=>"http://www.ukulelehunt.com/"} Uke Hunt
+              %span{:class=>"link_note"} Great modern tunes
+            %li
+              %a{:href=>"http://www.giantflightlessbirds.com/ukulele/"} Mike's Ukulele Page
+              %span{:class=>"link_note"} Awesome, clean, current tabs
+  :plain
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-87136-12");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+    </script>
