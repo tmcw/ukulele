@@ -28,7 +28,7 @@ get '/tab/:tab' do
   CHO = /\[([^\[\]]+)\]/x
   @tab_text = RedCloth.new(text).to_html
   @chords = text.scan(CHO).uniq.map{ |c| c[0].gsub("#", "x") }
-  print @chords
+  # print @chords
   @artist = tab.split("-")[0].gsub(/_/, " ")
   @song = tab.split("-")[1].gsub(/_/, " ").sub(".txt", "")
   @tabs = get_tabs
