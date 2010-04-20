@@ -18,7 +18,7 @@ require 'chord'
 
 def get_tabs
   @tabs  = []
-  Dir.new('/home/tom/ukulele/tabs').entries.each do |tab|
+  Dir.new('tabs').entries.each do |tab|
     if tab.include? "-" and parts = tab.split("-")
       artist = parts[0].gsub(/_/, " ")
       song = parts[1].gsub(/_/, " ").sub(".txt", " ")
@@ -40,7 +40,7 @@ get '/tab/:tab' do
   require 'tab_parser'
   tab = params[:tab]
   #TODO: detect when files are not found
-  text = File.read('/home/tom/ukulele/tabs/'+tab+".txt")
+  text = File.read('tabs/'+tab+".txt")
   CHO = /\[([^\[\]]+)\]/x
   @tab_text = RedCloth.new(text).to_html
   @chords = text.scan(CHO).uniq.map{ |c| c[0].gsub("#", "x") }
