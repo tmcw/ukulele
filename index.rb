@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'chord'
+require 'Haml'
 
 ## 
 # Uke/Tommacwright
@@ -14,6 +15,7 @@ require 'chord'
 # TODO: optimize w/ caching
 # TODO: switch from HAML to erb
 # TODO: switch to uchord
+# TODO: update RedCloth implementation to work with current version
 
 
 def get_tabs
